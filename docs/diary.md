@@ -55,4 +55,9 @@ case_id,annotation
     annotation - One of authentic or a run length encoded mask.
     ```
     > 目的: train_masksは学習用の正解データ（ピクセル単位のセグメンテーションラベル）で、画像内の「コピー＆ムーブ（重複）された領域」を示します。
-  - ほへー
+  - torchvision.models.mobilenet_v3_small ?
+    - 軽量CNN: モバイル/エッジ向けに設計された効率特化の畳み込みネットワーク。
+  - AnchorGenerator, ops.MultiScaleRoIAlign のあたり
+    - https://tanalib.com/faster-rcnn-anchor/
+    - feature抽出のためにanchor boxを作成できる
+    - 抽出後の特徴量領域をから関心領域*(RoI)を取り出す -> MultiScaleRoIAlign みたいな感じぽい
