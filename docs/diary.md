@@ -61,3 +61,12 @@ case_id,annotation
     - https://tanalib.com/faster-rcnn-anchor/
     - feature抽出のためにanchor boxを作成できる
     - 抽出後の特徴量領域をから関心領域*(RoI)を取り出す -> MultiScaleRoIAlign みたいな感じぽい
+  - mobilev3-small で score: **3.03** をベースラインとしてsubmit
+    - `001_eda_r-cnn.ipynb`
+
+### 2025/01/05
+
+- 画像認識の歴史
+  - https://sci-gen.hatenablog.com/entry/2025/05/17/060000#421-%E9%80%B2%E5%8C%96FCNU-Net%E3%81%8B%E3%82%89Mask-R-CNNTransformer%E3%83%99%E3%83%BC%E3%82%B9%E3%83%A2%E3%83%87%E3%83%AB%E3%81%B8
+  - DINOv2 ばかりなのはベースモデルとして有用だから? NLPタスクにおけるQWENみたいな立ち位置なのかもしれない
+  - 高速化とアンサンブルでなんとかならんかな
