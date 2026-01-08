@@ -66,7 +66,7 @@ case_id,annotation
 
 ### 2025/01/05
 
-- 画像認識の歴史
+- 記事メモ: 画像認識の歴史
   - https://sci-gen.hatenablog.com/entry/2025/05/17/060000#421-%E9%80%B2%E5%8C%96FCNU-Net%E3%81%8B%E3%82%89Mask-R-CNNTransformer%E3%83%99%E3%83%BC%E3%82%B9%E3%83%A2%E3%83%87%E3%83%AB%E3%81%B8
   - DINOv2 ばかりなのはベースモデルとして有用だから? NLPタスクにおけるQWENみたいな立ち位置なのかもしれない
   - 高速化とアンサンブルでなんとかならんかな
@@ -76,3 +76,26 @@ case_id,annotation
   - このあたりが怪しそうではあるが、smallのときの submit がすべて authentic で予測されていただけということになるので信じがたい
   - 手元では動いてるが、テストデータが1件なのでローカルデバッグしずらい
     - いい方法ないの??
+
+- 記事メモ: r-cnnの歴史
+  - https://zenn.dev/kabupen/articles/note-20230320-00
+
+### 2025/01/06
+
+- https://www.kaggle.com/code/maheenriaz1122/cnn-dinov2-hybrid-c0bb37/notebook
+  - Encoder: dino-v2, decoder: cnn
+  - score: 0.315
+- https://www.kaggle.com/code/pankajiitr/scientific-forensics-dinov2-cnn-ipynb
+  ```
+  Notebook Overview: CNN-DINOv2 Hybrid
+  This notebook demonstrates a hybrid approach for image classification using both Convolutional Neural Networks (CNNs) and DINOv2, a self-supervised vision transformer model. The workflow includes:
+
+  Data Loading & Preprocessing: Images are loaded, resized, normalized, and split into training and validation sets.
+  Feature Extraction: DINOv2 is used to extract high-level features from images, leveraging its transformer-based architecture for robust representations.
+  CNN Model Construction: A custom CNN is built to process image data, learning spatial hierarchies and patterns.
+  Hybrid Model Integration: Features from DINOv2 and the CNN are combined, either by concatenation or other fusion techniques, to enhance classification performance.
+  Training & Evaluation: The hybrid model is trained on the dataset, with metrics such as accuracy and loss tracked. Validation is performed to assess generalization.
+  Visualization & Analysis: Results, including confusion matrices and sample predictions, are visualized to interpret model behavior.
+  This approach aims to leverage the strengths of both CNNs (local feature learning) and DINOv2 (global, context-aware representations) for improved image classification results.
+  ```
+  - ぱっと見てtta以外にあんまり違いがないように見える
