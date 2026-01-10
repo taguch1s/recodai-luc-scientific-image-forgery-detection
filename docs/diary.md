@@ -99,3 +99,6 @@ case_id,annotation
   This approach aims to leverage the strengths of both CNNs (local feature learning) and DINOv2 (global, context-aware representations) for improved image classification results.
   ```
   - ぱっと見てtta以外にあんまり違いがないように見える
+
+### 08
+DiceLossって何？
